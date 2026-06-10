@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastapi-project"
+version = "0.1.0"
+description = "A project that wants to create a simple app using fastapi"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "pydantic-settings",
+    "python-multipart",
+    "httpx",
+    "sqlalchemy",
+    "alembic",
+    "asyncpg",
+    "psycopg[binary]",
+    "aiofiles",
+    "aiosqlite",
+    "celery",
+    "redis",
+    "flower",
+    "ollama",
+    "openai",
+    "tiktoken",
+    "beautifulsoup4",
+    "lxml",
+    "markdownify",
+    "rapidfuzz",
+    "python-dotenv",
+    "orjson",
+    "tenacity",
+    "rich",
+    "loguru",
+    "typer",
+    "email-validator",
+    "cachetools",
+    "pytest",
+    "pytest-asyncio",
+    "faker",
+    "pytest-cov",
+    "anyio[trio]",
+    "factory-boy",
+]
+
+[tool.setuptools]
+packages = ["models", "routes", "schemas"]
