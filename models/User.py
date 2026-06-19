@@ -12,5 +12,5 @@ class User(Base):
     username: Mapped[str] = mapped_column(String, unique=True, index=True)
     email: Mapped[str] = mapped_column(String, unique=True, index=True)
     hashed_password: Mapped[str] = mapped_column(String)
-
     songs: Mapped[list["Song"]] = relationship(back_populates="publisher")
+    liked_songs: Mapped[list["Song"]] = relationship(secondary="likes", back_populates="liked_by_users")

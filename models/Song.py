@@ -16,5 +16,7 @@ class Song(Base):
     
     publisher: Mapped["User"] = relationship(back_populates="songs")
     tags: Mapped[list["Tag"]] = relationship(secondary="song_tags", back_populates="songs")
+
+    liked_by_users: Mapped[list["User"]] = relationship(secondary="likes", back_populates="liked_songs")
     
 

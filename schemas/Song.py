@@ -6,7 +6,7 @@ class SongBase(BaseModel):
     title: str
 
 class SongCreate(SongBase):
-    pass
+    tag_ids: List[int] = []
 
 class SongOut(SongBase):
     song_id: int

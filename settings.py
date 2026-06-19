@@ -33,10 +33,10 @@ class Settings(BaseSettings):
     CELERY_RESULT_SERIALIZER: str = "json"
 
     # ── Auth / JWT ────────────────────────────────────────
-    # JWT_SECRET_KEY: str = "changeme"
-    # JWT_ALGORITHM: str = "HS256"
-    # ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
-    # REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+    JWT_SECRET_KEY: str = "changeme"
+    JWT_ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
     # ── CORS ──────────────────────────────────────────────
     # CORS_ORIGINS: list[str] = ["http://localhost:3000"]
@@ -78,8 +78,9 @@ class Settings(BaseSettings):
     # OLLAMA_TEMPERATURE: float = 0.1
     # OPENAI_API_KEY: str = ""
     # OPENAI_MODEL: str = "gpt-4o"
-
-    
-
+    SUPABASE_URL: str = ""
+    SUPABASE_KEY: str = ""
+    SUPABASE_SERVICE_KEY: str = ""
+    BUCKET_NAME: str = "audio-vault"
 
 settings = Settings()

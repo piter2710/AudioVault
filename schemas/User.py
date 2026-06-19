@@ -16,3 +16,7 @@ class UserOut(UserBase):
 
 class UserWithSongs(UserOut):
     songs: List[SongOut] = []
+
+class UserWithLikes(UserOut):
+    liked_songs: List[SongOut] = []
+
